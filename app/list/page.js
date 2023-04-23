@@ -1,4 +1,7 @@
 import { connectDB } from "@/util/database";
+import Link from "next/link";
+
+import DetailLink from "./DetailLink";
 
 export default async function List() {
   const db = (await connectDB).db("forum");
@@ -11,8 +14,11 @@ export default async function List() {
         {result.map((list, i) => {
           return (
             <div className="list-item" key={i}>
-              <h4>{list.title}</h4>
+              <Link href={'/detail/' + result[i]._id}>
+                <h4>{list.title}</h4>
+              </Link>
               <p>{list.content}</p>
+              <DetailLink/>
             </div>
           );
         })}
@@ -20,3 +26,7 @@ export default async function List() {
     </div>
   );
 }
+
+
+// <Link href={'/detail/' + result[i]._id}>
+// dynamic route를 사용 /list페이지에서 글제목을 누르면 알맞은 상세페이지로 이동할 수 있게 하는 링크 코드
