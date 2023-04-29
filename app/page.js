@@ -7,8 +7,7 @@ export default async function Home() {
   let result = await db.collection('post').find().toArray(); //컬렉션의 모든 document들을 꺼내오기
   // post 컬렉션에 있는 모든 데이터를 가져와서 array로 변환해 주세요라는 코드
 
-  console.log(result);
-
+  // console.log(result);
 
   return (
     <div></div>

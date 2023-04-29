@@ -9,7 +9,7 @@ export default async function Detail(props) {
     _id: new ObjectId(props.params.id),
   });
 
-  console.log(props.params.id); 
+  // console.log(props.params.id); 
   // console.log(result);
 
   return (
@@ -20,12 +20,6 @@ export default async function Detail(props) {
     </div>
   );
 }
-
-
-
-
-
-
 
   // db.collection(컬렉션명).findOne(찾을document내용)
   //  게시물 하나를 정확히 찾아오고 싶을 땐

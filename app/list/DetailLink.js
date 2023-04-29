@@ -2,7 +2,7 @@
 // server 컴포넌트에서는 useRoute 사용이 불가능 하기 때문에  client 컴포넌트에서 테스트 사용
 'use client';
 
-import { useParams, usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 export default function DetailLink() {
     let router = useRouter(); // client 컴포넌트에서만 사용 가능
